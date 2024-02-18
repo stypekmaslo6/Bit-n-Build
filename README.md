@@ -1,3 +1,5 @@
+# About
+It is a project we made in group of 4 with my friends from university for hackathon "Bit'n'Build Poland 2024"
 # Installation Setup
 ## Required technologies
 * Python 3.10
