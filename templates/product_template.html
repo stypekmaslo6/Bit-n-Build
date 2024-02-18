@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% for product in products %}
+    <title>{{ product.name }}</title>
+    <link rel="stylesheet" href="../static/styles/style_product.css">
+</head>
+<body>
+    <div class="product">
+        <div class='center'>
+            <a href="/"><img src="../static/logo/image.png"></a>
+            <link rel="icon" href="../static/logo/tab_logo.jpg">
+        </div>
+        <h2 class="product-name">{{ product.name.capitalize() }}</h2>
+        <div class="product-desc-img">
+            <p class="product-description">{{ product.description }}</p>
+
+            <div class="center">
+                <img class="product-image" src="{{ url_for('static', filename='uploads/' + product.picture) }}" alt="Product Image"> <!-- Dodano klasę "product-image" -->
+            </div>
+        </div>
+        <p class="price">Price: <span class="product-price"> {{ '%0.2f'| format(product.price|float)}}$ </span></p>
+        <p class="posted-by">Posted by: <span class="username">{{ product.username }}</span></p>
+    </div>
+    {% endfor %}
+<div class="footer">
+        <div class = "container_footer">
+            <div class ="row">
+                <div class = "footer-col-1">
+                    <h2>Download Our App</h2>
+                    <p>Download App for Android and iOS</p>
+                </div>
+                <div class="footer-col-2">
+                    <img src="../static/logo/tab_logo.jpg">
+                    <p>Ecoteczki - Our goal is to build a green world!</p>
+                </div>
+                <div class = "footer-col-3">
+                    <h3>Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class = "footer-col-4">
+                    <h3>Socials</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                        <li>Twitter</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2024 - Ecoteczki</p>
+        </div>
+    </div>
+</body>
+</html>
