@@ -6,7 +6,7 @@
 * SQLAlchemy 2.0.27
 * Werkzeug 2.3.7
 
-## Initialazing
+## Initializing
 * First of all you have to download every photo from this repository
 * Then you have to initialize your local database in python console
 ```
